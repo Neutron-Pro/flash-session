@@ -17,11 +17,11 @@ class FlashSession
 
     private function loadMessages(): void
     {
-        if(!empty($_SESSION[$this->sessionKey]))
-        {
-            foreach ($_SESSION[$this->sessionKey] as $key => $value)
-            {
-                $this->messages[$key] = new FlashMessage($value['type'], $value['message']);
+        if(!empty($_SESSION[$this->sessionKey])) {
+            foreach ($_SESSION[$this->sessionKey] as $key => $messages) {
+                foreach ($messages as $message) {
+                    $this->messages[$key][] = new FlashMessage($message['type'], $message['message']);
+                }
             }
         }
     }
