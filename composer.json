@@ -1,0 +1,21 @@
+{
+    "name": "neutronstars/flash-session",
+    "description": "Message flash into the session",
+    "type": "library",
+    "authors": [
+        {
+            "name": "NeutronStars",
+            "email": "pro@neutronstars.fr"
+        }
+    ],
+    "minimum-stability": "stable",
+    "license": [ "Apache-2.0" ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "NeutronStars\\FlashSession\\": "src/"
+        }
+    }
+}
